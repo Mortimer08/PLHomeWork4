@@ -10,6 +10,10 @@ Console.Write("Первое число: ");
 int number1 = Convert.ToInt32(Console.ReadLine());
 Console.Write("Второе (натуральное) число: ");
 int number2 = Convert.ToInt32(Console.ReadLine());
+
+// Хотя 0 - не натуральное число, этот показатель степени не исключён
+// ответ получается корректный
+
 if (number2 < 0)
 {
     Console.WriteLine("Введено отрицательное число, берём его модуль");
