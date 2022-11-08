@@ -5,28 +5,28 @@
 
 
 int arrayLen = 8;
-int[] array = ArrayCreate(arrayLen);
+int[] array = new int[arrayLen];
+ArrayFill(array);
 ArrayPrint(array);
 
-int[] ArrayCreate(int num)
-// Выбран диапазон случайных чисел от 0 до 50
+void ArrayFill(int[] collection)
 {
+    int length = collection.Length;
     Random rnd = new Random();
-    int[] arr = new int[num];
-    for (int i = 0; i < num; i++)
+    for (int i = 0; i < length; i++)
     {
-        arr[i] = rnd.Next(0, 51);
+        collection[i] = rnd.Next(0, 51);
     }
-    return arr;
 }
 
-void ArrayPrint(int[] array)
+void ArrayPrint(int[] collection)
 {
+    int length = collection.Length;
     Console.Write("[");
-    for (int i = 0; i < array.Length; i++)
+    for (int i = 0; i < length; i++)
     {
-        Console.Write($"{array[i]}");
-        Console.Write(i < array.Length - 1 ? "," : "");
+        Console.Write($"{collection[i]}");
+        Console.Write(i < collection.Length - 1 ? "," : "");
     }
     Console.WriteLine("]");
 }
